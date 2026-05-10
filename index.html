@@ -3,75 +3,127 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Linktree Bobwan</title>
+  <title>Azkha Side Story</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome untuk icon -->
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
-  <!-- Background animasi -->
+
+  <!-- Background -->
   <canvas id="bg-canvas"></canvas>
 
-  <!-- Konten utama -->
+  <!-- Main Content -->
   <div class="container crt">
+
+    <!-- Profile -->
     <div class="avatar animate-fade-up">
       <img src="icon.png" alt="Avatar" />
     </div>
-    <h1 class="animate-fade-up" style="animation-delay: 0.2s">@Bobwan</h1>
-    <p class="animate-fade-up" style="animation-delay: 0.4s">🎮 Gamer | 💻 Dev | Pixel Vibes</p>
-    
+
+    <h1 class="animate-fade-up" style="animation-delay: 0.2s">
+      @AzkhaSideStory
+    </h1>
+
+    <p class="animate-fade-up" style="animation-delay: 0.4s">
+      🎥 Vlogger | 🌊 Healing | 📍Indonesia
+    </p>
+
+    <!-- Links -->
     <div class="links">
-      <a id="music-toggle" class="animate-fade-up" style="animation-delay: 1.7s; cursor: pointer;">
-      <i class="fas fa-music"></i> Music (Play)
+
+      <!-- Music -->
+      <a id="music-toggle" class="animate-fade-up" style="animation-delay: 0.8s; cursor: pointer;">
+        <i class="fas fa-music"></i> Music (Play)
       </a>
-    <div class="links">
-      <a href="warning.html" class="animate-fade-up" style="animation-delay: 1.4s">
-        <i class="fas fa-globe"></i> TOPUP IS HERE
-      </a>
-      <a href="https://github.com/bobwan-pixel" class="animate-fade-up" style="animation-delay: 1s">
-        <i class="fab fa-github"></i> GitHub
-      </a>
-      <a href="https://www.instagram.com/dwipandu013?igsh=dzc2YnJ0cmExMHY3" class="animate-fade-up" style="animation-delay: 1.2s">
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/yossiazkha?igsh=MWdxdDhleTZ0NTBwOQ==" 
+         class="animate-fade-up" 
+         style="animation-delay: 1s">
+
         <i class="fab fa-instagram"></i> Instagram
       </a>
-      <a href="https://www.tiktok.com/@bobwan.id?_t=ZS-8yRDwaI3LHR&_r=1" class="animate-fade-up" style="animation-delay: 1.6s">
+
+      <!-- TikTok -->
+      <a href="https://tiktok.com/@yossiazkha29" 
+         class="animate-fade-up" 
+         style="animation-delay: 1.2s">
+
         <i class="fab fa-tiktok"></i> TikTok
       </a>
-      <a href="warning.html" class="animate-fade-up" style="animation-delay: 1.8s">
-        <i class="fab fa-facebook"></i> Facebook
+
+      <!-- Threads -->
+      <a href="https://www.threads.com/@azkhasidestory" 
+         class="animate-fade-up" 
+         style="animation-delay: 1.4s">
+
+        <i class="fab fa-threads"></i> Threads
       </a>
-      <a href="Cs.html" class="animate-fade-up" style="animation-delay: 1.2s">
-        <i class="fas fa-phone"></i> CS
+
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/@AzkhaSideStory" 
+         class="animate-fade-up" 
+         style="animation-delay: 1.6s">
+
+        <i class="fab fa-youtube"></i> YouTube
       </a>
-      <a href="code.html" class="animate-fade-up" style="animation-delay: 2s">
-        <i class="fab fa-js-square"></i> Resource code
+
+      <!-- Contact -->
+      <a href="Cs.html" 
+         class="animate-fade-up" 
+         style="animation-delay: 1.8s">
+
+        <i class="fas fa-phone"></i> Contact
       </a>
+
     </div>
 
-    <footer class="animate-flicker">🕹️ Powered by Bobwan - 2025</footer>
+    <!-- Footer -->
+    <footer class="animate-flicker">
+      ✨ Azkha Side Story - 2026
+    </footer>
+
   </div>
 
+  <!-- Sound -->
   <audio id="click-sound" src="klik.ogg" preload="auto"></audio>
-  <!-- Musik autoplay -->    
-  <audio id="bg-music" src="musik.mp3" preload="auto" loop></audio>
-<script>
-  const bgMusic = document.getElementById("bg-music");
-  const musicToggle = document.getElementById("music-toggle");
 
-  // Event untuk toggle musik
-  musicToggle.addEventListener("click", () => {
-    if (bgMusic.paused) {
-      bgMusic.play().then(() => {
-        musicToggle.innerHTML = '<i class="fas fa-music"></i> Music (Pause)';
-      }).catch(err => {
-        console.warn("Gagal memutar musik:", err);
-      });
-    } else {
-      bgMusic.pause();
-      musicToggle.innerHTML = '<i class="fas fa-music"></i> Music (Play)';
-    }
-  });
-</script>
+  <!-- Background Music -->
+  <audio id="bg-music" src="musik.mp3" preload="auto" loop></audio>
+
+  <script>
+    const bgMusic = document.getElementById("bg-music");
+    const musicToggle = document.getElementById("music-toggle");
+
+    musicToggle.addEventListener("click", () => {
+
+      if (bgMusic.paused) {
+
+        bgMusic.play().then(() => {
+
+          musicToggle.innerHTML =
+            '<i class="fas fa-music"></i> Music (Pause)';
+
+        }).catch(err => {
+
+          console.warn("Gagal memutar musik:", err);
+
+        });
+
+      } else {
+
+        bgMusic.pause();
+
+        musicToggle.innerHTML =
+          '<i class="fas fa-music"></i> Music (Play)';
+      }
+    });
+  </script>
+
   <script src="script.js"></script>
+
 </body>
 </html>
